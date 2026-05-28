@@ -11,26 +11,24 @@
         ResizeMode="NoResize">
     <Grid>
      
-        <!-- 
-            HOME GRID
-            This grid serves as the main landing page  of the application.
-            It contains a logo for AI , a welcome message to greet users,
-            and a navigation button to proceed to the next section.
-            Currently hidden by default.
-        -->
-        <Grid x:Name="home_grid" Visibility="Visible"
-              Background="GreenYellow">
-            
-            
+        <!--start of parent grid-->
 
+<!-- ============================================================ -->
+<!--  HOME GRID                                                    -->
+<!-- ============================================================ -->
+<Grid x:Name="home_grid" Visibility="Visible"
+      Background="#0D1B2A">
+    <!--start of home grid-->
 
-            <!-- Logo -->
-            <Image 
-                Source="/Logo.jpg" 
-                Height="200"
-                Width="300"
-                Margin="0,0,0,200"
-                   />
+    <!-- logo -->
+    <Image
+        Source="/Logo.jpg"
+        Height="180"
+        Width="180"
+        Margin="0,0,0,220"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"/>
+
             <!-- welcome message-->
             <TextBlock
                 Text="Welcome to TechnoGeek Ai, Your Cybersecurity Awareness Assistant"
