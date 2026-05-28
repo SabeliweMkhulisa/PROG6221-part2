@@ -100,7 +100,7 @@ namespace assignment_two
             {
                 Margin = new Thickness(0, 2, 0, 2),
                 Padding = new Thickness(5, 3, 5, 3),
-                CornerRadius = new CornerRadius(5)
+                CornerRadius = new CornerRadius(6)
             };
 
             // Set different background for user vs bot
