@@ -29,132 +29,273 @@
         HorizontalAlignment="Center"
         VerticalAlignment="Center"/>
 
-            <!-- welcome message-->
+           <!-- app title -->
             <TextBlock
-                Text="Welcome to TechnoGeek Ai, Your Cybersecurity Awareness Assistant"
-                Height="20"
-                Width="370"
-                TextAlignment="Center"
-                Margin="0,30,0,0"
+                Text="TechnoGeek AI"
+                Foreground="#00BFFF"
                 FontFamily="Arial Rounded MT Bold"
-                />
+                FontSize="28"
+                FontWeight="Bold"
+                TextAlignment="Center"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0,100,0,0"/>
 
-            <!-- button to continue-->
-            <Button 
-                Height="40"
+            <!-- subtitle -->
+            <TextBlock
+                Text="Your Cybersecurity Awareness Assistant"
+                Foreground="White"
+                FontFamily="Arial Rounded MT Bold"
+                FontSize="13"
+                TextAlignment="Center"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0,155,0,0"/>
+
+            <!-- divider line -->
+            <Border
+                Height="2"
                 Width="300"
-                Margin="0,200,0,0"
-                Content="START"
-                Click="proceed"
-                Background="DeepSkyBlue"
-                />
+                Background="#00BFFF"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0,195,0,0"/>
+
+            <!-- start button -->
+            <Border
+                Height="48"
+                Width="260"
+                CornerRadius="24"
+                Background="#00BFFF"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0,270,0,0">
+                <Button
+                    Content="GET STARTED"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Foreground="#0D1B2A"
+                    FontFamily="Arial Rounded MT Bold"
+                    FontSize="14"
+                    FontWeight="Bold"
+                    Cursor="Hand"
+                    Click="proceed"/>
+            </Border>
 
         </Grid>
+        <!--end of home grid-->
 
-        <!-- 
-            USERNAME GRID
-            This grid is for prompting the user for username.
-            It contains a logo for AI, a textbox for users to enter their name,
-            and a submit button to save the username.
-            Hidden .
-        -->
+        <!-- ============================================================ -->
+        <!--  USERNAME GRID                                                -->
+        <!-- ============================================================ -->
         <Grid x:Name="username_grid" Visibility="Hidden"
-              Background="GreenYellow">
+              Background="#0D1B2A">
+            <!--start of username grid-->
 
+            <!-- logo -->
+            <Image
+                Source="/Logo.jpg"
+                Height="120"
+                Width="120"
+                Margin="0,0,0,280"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
 
-            <!-- Logo -->
-            <Image 
-                Source="/Logo.jpg" 
-                Height="200"
-                Width="300"
-                Margin="0,0,0,200"
-                   />
-            <!-- Hint message-->
+            <!-- welcome text -->
             <TextBlock
-                Text="Enter username"
-                Height="20"
-                Width="270"
-                TextAlignment="Justify"
-                Margin="0,30,0,0"
+                Text="Welcome! Who are you?"
+                Foreground="#00BFFF"
                 FontFamily="Arial Rounded MT Bold"
-              
-                />
-
-            <!-- Enter/Prompt username-->
-            <TextBox
-                Height="40"
-                Width="270"
+                FontSize="18"
+                FontWeight="Bold"
                 TextAlignment="Center"
-                Margin="0,100,0,0"
-                FontFamily="Arial Rounded MT Bold"
-                x:Name="usernames_input"
-                
-               
-                />
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0,30,0,0"/>
 
-
-            <!-- error message-->
+            <!-- hint text -->
             <TextBlock
-         Text="please enter username to continue..."
-         Height="20"
-         Width="270"
-         TextAlignment="Justify"
-         Margin="0,180,0,0"
-         Foreground="Red"
-         FontFamily="Arial Rounded MT Bold"
-         />
+                Text="Enter your name to get started"
+                Foreground="#888888"
+                FontFamily="Arial Rounded MT Bold"
+                FontSize="12"
+                TextAlignment="Center"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0,80,0,0"/>
 
-            <!-- button to submit name-->
-            <Button 
-        Height="40"
-        Width="270"
-        Margin="0,250,0,0"
-        FontFamily="Arial Rounded MT Bold"        
-        Content="submit username"
-        Click="submit_name"
-          Background="DeepSkyBlue"       
-        />
+            <!-- username input with rounded border -->
+            <Border
+                Height="45"
+                Width="300"
+                CornerRadius="22"
+                Background="#1A2A3A"
+                BorderBrush="#00BFFF"
+                BorderThickness="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0,140,0,0">
+                <TextBox
+                    x:Name="usernames_input"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Foreground="White"
+                    FontFamily="Arial Rounded MT Bold"
+                    FontSize="13"
+                    TextAlignment="Center"
+                    VerticalAlignment="Center"
+                    CaretBrush="White"
+                    Padding="15,0"/>
+            </Border>
+
+            <!-- error message -->
+            <TextBlock
+                Text="Please enter your name to continue..."
+                Foreground="#FF4444"
+                FontFamily="Arial Rounded MT Bold"
+                FontSize="11"
+                TextAlignment="Center"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0,210,0,0"/>
+
+            <!-- submit button -->
+            <Border
+                Height="45"
+                Width="300"
+                CornerRadius="22"
+                Background="#00BFFF"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="0,280,0,0">
+                <Button
+                    Content="SUBMIT"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Foreground="#0D1B2A"
+                    FontFamily="Arial Rounded MT Bold"
+                    FontSize="14"
+                    FontWeight="Bold"
+                    Cursor="Hand"
+                    Click="submit_name"/>
+            </Border>
 
         </Grid>
+        <!--end of username grid-->
 
-        <!-- 
-            CHAT GRID
-            This grid handles all messaging and conversation-related features of the application.
-            It contains a ListView to display chat messages, a textbox for typing questions,
-            and a submit button to send the question to the chat.
-            Starting in a hidden state.
-        -->
-        <Grid x:Name="chat_grid" Visibility="Hidden" Background="Aquamarine">
+        <!-- ============================================================ -->
+        <!--  CHAT GRID                                                    -->
+        <!-- ============================================================ -->
+        <Grid x:Name="chat_grid" Visibility="Hidden"
+              Background="#0D1B2A">
+            <!--start of chat grid-->
 
+            <!-- top header bar -->
+            <Border
+                Height="55"
+                Background="#0A1628"
+                BorderBrush="#00BFFF"
+                BorderThickness="0,0,0,1"
+                VerticalAlignment="Top">
+                <StackPanel
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                    Margin="15,0,0,0">
+                    <Image
+                        Source="/Logo.jpg"
+                        Height="36"
+                        Width="36"
+                        Margin="0,0,10,0"/>
+                    <TextBlock
+                        Text="TechnoGeek AI"
+                        Foreground="#00BFFF"
+                        FontFamily="Arial Rounded MT Bold"
+                        FontSize="16"
+                        FontWeight="Bold"
+                        VerticalAlignment="Center"/>
+                    <TextBlock
+                        Text="  •  Cybersecurity Assistant"
+                        Foreground="#555555"
+                        FontFamily="Arial Rounded MT Bold"
+                        FontSize="12"
+                        VerticalAlignment="Center"/>
+                </StackPanel>
+            </Border>
 
-            <!-- List view to show messages show messages-->
-            <ListView  
-                x:Name="chats" 
-                Height="300"
-                Margin="0,0,0,120"
-                Background="Aquamarine"
-                />
+            <!-- chat listview with rounded border -->
+            <Border
+                Margin="15,70,15,85"
+                CornerRadius="16"
+                Background="#0A1628"
+                BorderBrush="#1A3A5A"
+                BorderThickness="1">
+                <ListView
+                    x:Name="chats"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    Padding="8"
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+            </Border>
 
+            <!-- bottom input area -->
+            <Border
+                Height="70"
+                Background="#0A1628"
+                BorderBrush="#00BFFF"
+                BorderThickness="0,1,0,0"
+                VerticalAlignment="Bottom">
+                <Grid Margin="15,0,15,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="110"/>
+                    </Grid.ColumnDefinitions>
 
-            <!-- TextBox to prompt questions-->
-            <TextBox
-                x:Name="question"
-                Height="50"
-                Width="480"
-                Margin="0,300,300,0"
-                />
+                    <!-- question input -->
+                    <Border
+                        Grid.Column="0"
+                        CornerRadius="22"
+                        Background="#1A2A3A"
+                        BorderBrush="#00BFFF"
+                        BorderThickness="1.5"
+                        Margin="0,12,10,12">
+                        <TextBox
+                            x:Name="question"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="White"
+                            FontFamily="Arial Rounded MT Bold"
+                            FontSize="13"
+                            VerticalAlignment="Center"
+                            CaretBrush="White"
+                            Padding="15,0"/>
+                    </Border>
 
-            <!-- button to submit -->
-            <Button
-                Height="50"
-                Width="280"
-                Margin="490,300,0,0"
-                Content="send "
-                Click="send"
-                 Background="DeepSkyBlue"
-                />
+                    <!-- send button -->
+                    <Border
+                        Grid.Column="1"
+                        CornerRadius="22"
+                        Background="#00BFFF"
+                        Margin="0,12,0,12">
+                        <Button
+                            Content="SEND"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="#0D1B2A"
+                            FontFamily="Arial Rounded MT Bold"
+                            FontSize="13"
+                            FontWeight="Bold"
+                            Cursor="Hand"
+                            Click="send"/>
+                    </Border>
+
+                </Grid>
+            </Border>
 
         </Grid>
+        <!--end of chat grid-->
 
     </Grid>
+    <!--end of parent grid-->
+
 </Window>
