@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:assignment_two"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="TechnoGeek" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="#0D1B2A"
+        ResizeMode="NoResize">
     <Grid>
      
         <!-- 
