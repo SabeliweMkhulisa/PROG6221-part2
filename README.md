@@ -8,7 +8,7 @@ TechnoGeek AI is a Cybersecurity Awareness Chatbot built using C# and WPF (Windo
 
 TechnoGeek AI, How the App Works
 
-Step 1, Launch the App
+Step 1,how to Launch the App
 When you run the app the Home Page appears first.
 You will see the TechnoGeek logo, a welcome message, and a GET STARTED button.
 Click the button to move to the next page.
